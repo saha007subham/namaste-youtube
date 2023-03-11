@@ -1,11 +1,12 @@
 import "./App.css";
+import Head from "./components/Head";
+import Body from "./components/Body";
 
 function App() {
   return (
     <div>
-      <h1 className="text-red-500">Namaste React</h1>
-      <h3>Youtube Clone</h3>
-      <p>hdjsahgdsagd</p>
+      <Head />
+      <Body />
     </div>
   );
 }
