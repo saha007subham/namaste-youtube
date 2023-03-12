@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 
 const Body = () => {
   return (
-    <div className="flex gap-3 p-2">
+    <div className="flex gap-3 p-2 mt-8">
       <Sidebar />
       <MainContainer />
     </div>

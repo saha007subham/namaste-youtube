@@ -38,13 +38,13 @@ const Sidebar = () => {
         <h1 className="font-bold">Subcriptions</h1>
         <ul>
           <li className="hover:bg-gray-200 rounded p-2 cursor-pointer">
-            Javascript Mastery
+            JS Codes
           </li>
           <li className="hover:bg-gray-200 rounded p-2 cursor-pointer">
             CodeWithHarry
           </li>
           <li className="hover:bg-gray-200 rounded p-2 cursor-pointer">
-            Sony Entertainment
+            Sony Liv
           </li>
           <li className="hover:bg-gray-200 rounded p-2 cursor-pointer">
             TechieGuy

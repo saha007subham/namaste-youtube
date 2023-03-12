@@ -1,24 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { YOUTUBE_VIDEOS_API } from "../utils/constants";
+import VideoCard from "./VideoCard";
 
 const VideoContainer = () => {
+  const [videos, setVideos] = useState([]);
+
   useEffect(() => {
     getVideos();
   }, []);
 
   const getVideos = async () => {
-    try {
-      const data = await fetch(YOUTUBE_VIDEOS_API);
-      const json = await data.json();
-      console.log(json);
-    } catch (err) {
-      console.log(err);
-    }
+    const data = await fetch(YOUTUBE_VIDEOS_API);
+    const json = await data.json();
+    // console.log(json.items);
+
+    setVideos(json.items);
   };
 
+  // console.log(videos[0]);
+
   return (
-    <div>
-      <h2>Video Container</h2>
+    <div className="mt-2 grid grid-cols-3">
+      {videos.map((video) => {
+        return <VideoCard info={video} key={video.id} />;
+      })}
     </div>
   );
 };
