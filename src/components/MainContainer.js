@@ -9,9 +9,9 @@ const MainContainer = () => {
   let style;
 
   if (!isMenuOpen) {
-    style = `bg-red-300 w-[100%]`;
+    style = ` w-[100%]`;
   } else {
-    style = `bg-blue-300 w-[82%]`;
+    style = `b w-[82%]`;
   }
 
   return (

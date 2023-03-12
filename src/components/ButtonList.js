@@ -1,9 +1,25 @@
 import React from "react";
+import Button from "./Button";
 
 const ButtonList = () => {
+  const buttonList = [
+    "All",
+    "JavaScript",
+    "Mixes",
+    "Bollywood Music",
+    "Gaming",
+    "Comedy",
+    "Computer programming",
+    "News",
+    "Tourism",
+    "Arijit Singh",
+  ];
+
   return (
-    <div>
-      <h2>button List</h2>
+    <div className="flex gap-3">
+      {buttonList.map((list, id) => {
+        return <Button key={id} name={list} />;
+      })}
     </div>
   );
 };
