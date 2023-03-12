@@ -8,11 +8,24 @@ import { FaBell } from "react-icons/fa";
 
 import { youtubeLogo } from "../assets/youtubeLogo";
 
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Head = () => {
+  const dispatch = useDispatch();
+
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
     <div className="grid grid-flow-col p-2  shadow-md">
       <div className="flex gap-3 col-span-1">
-        <FaBars size={20} className="mt-3 cursor-pointer" />
+        <FaBars
+          size={20}
+          className="mt-3 cursor-pointer"
+          onClick={toggleMenuHandler}
+        />
         <img
           alt="youTube-logo"
           src={youtubeLogo}
