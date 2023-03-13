@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHome } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -12,10 +13,12 @@ const Sidebar = () => {
     <div className="p-5 shadow-lg w-[17%]">
       <div className="border-b border-gray-200 pb-2">
         <ul>
-          <li className="hover:bg-gray-200 rounded p-2 cursor-pointer flex items-center">
-            <FaHome className="mr-2" size={20} />
-            Home
-          </li>
+          <Link to={"/"}>
+            <li className="hover:bg-gray-200 rounded p-2 cursor-pointer flex items-center">
+              <FaHome className="mr-2" size={20} />
+              Home
+            </li>
+          </Link>
           <li className="hover:bg-gray-200 rounded p-2 cursor-pointer">
             Shorts
           </li>
