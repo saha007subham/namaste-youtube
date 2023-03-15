@@ -8,16 +8,28 @@ import { FaBell } from "react-icons/fa";
 
 import { youtubeLogo } from "../assets/youtubeLogo";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { cacheResults } from "../utils/searchSlice";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestion, setShowSuggestion] = useState(false);
+
+  const searchCache = useSelector((store) => store.search);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const timer = setTimeout(() => getSearchSuggestions(), 200);
+    const timer = setTimeout(() => {
+      if (searchCache[searchQuery]) {
+        setSuggestions(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
+    }, 200);
 
     return () => {
       clearTimeout(timer);
@@ -30,9 +42,13 @@ const Head = () => {
     const json = await data.json();
     // console.log(json[1]);
     setSuggestions(json[1]);
-  };
 
-  const dispatch = useDispatch();
+    dispatch(
+      cacheResults({
+        [searchQuery]: json[1],
+      })
+    );
+  };
 
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -61,6 +77,8 @@ const Head = () => {
                 placeholder="Search"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+                onFocus={() => setShowSuggestion(true)}
+                onBlur={() => setShowSuggestion(false)}
                 className="w-1/2 border border-gray-400 p-[4px] pl-[8px] outline-none rounded-l-full"
               />
               <button className="border border-gray-400 bg-gray-100 p-[2px] pl-[14px] w-[50px] h-[33px]  rounded-r-full hover:bg-gray-200 mr-3">
@@ -68,13 +86,16 @@ const Head = () => {
               </button>
             </div>
 
-            <div className="bg-gray-200 fixed flex justify-start w-[35%] ml-[207px]">
-              <ul>
-                {suggestions.map((s, id) => {
-                  return <li key={id}>{s}</li>;
-                })}
-              </ul>
-            </div>
+            {showSuggestion && (
+              <div className="bg-gray-200 fixed flex justify-start w-[35%] ml-[207px]">
+                <ul>
+                  {suggestions.map((s, id) => {
+                    return <li key={id}>{s}</li>;
+                  })}
+                </ul>
+              </div>
+            )}
+
             {/* <FaMicrophone size={18} className="cursor-pointer" /> */}
           </div>
         </div>
