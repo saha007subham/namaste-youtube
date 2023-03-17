@@ -15,7 +15,7 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="flex w-[100%]">
       <div className="mt-4 px-4">
         <iframe
           width="800"
@@ -26,8 +26,12 @@ const WatchPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        <CommentsContainer />
       </div>
-      <CommentsContainer />
+
+      <div className="bg-red-300 mt-4 w-[50%]">
+        <h1>Live Chat</h1>
+      </div>
     </div>
   );
 };
