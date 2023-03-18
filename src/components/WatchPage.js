@@ -30,7 +30,7 @@ const WatchPage = () => {
         <CommentsContainer />
       </div>
 
-      <div className="bg-slate-200 rounded-xl mt-5 p-2 w-[50%]">
+      <div className="bg-slate-200 rounded-xl mt-5 p-4 w-[50%] h-[500px] overflow-y-scroll flex flex-col-reverse">
         <LiveChat />
       </div>
     </div>
