@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
+import LiveChat from "../LiveChat";
 import { closeMenu } from "../utils/appSlice";
 import CommentsContainer from "./CommentsContainer";
 
@@ -15,7 +16,7 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className="flex w-[100%]">
+    <div className="flex w-full">
       <div className="mt-4 px-4">
         <iframe
           width="800"
@@ -29,8 +30,8 @@ const WatchPage = () => {
         <CommentsContainer />
       </div>
 
-      <div className="bg-red-300 mt-4 w-[50%]">
-        <h1>Live Chat</h1>
+      <div className="bg-slate-200 rounded-xl mt-5 p-2 w-[50%]">
+        <LiveChat />
       </div>
     </div>
   );
