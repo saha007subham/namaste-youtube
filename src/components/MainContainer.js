@@ -9,9 +9,9 @@ const MainContainer = () => {
   let style;
 
   if (!isMenuOpen) {
-    style = ` w-[100%], mt-[30px]`;
+    style = ` w-[82%], mt-[30px]`;
   } else {
-    style = `b w-[82%],  mt-[30px]`;
+    style = ` w-[82%],  mt-[30px]`;
   }
 
   return (

@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import LiveChat from "../LiveChat";
 import { closeMenu } from "../utils/appSlice";
 import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
+  const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
   const [searchParams] = useSearchParams();
   console.log(searchParams.get("v"));
 

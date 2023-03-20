@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { cacheResults } from "../utils/searchSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -63,11 +64,13 @@ const Head = () => {
             className="mt-3 cursor-pointer"
             onClick={toggleMenuHandler}
           />
+          {/* <Link to={"/"}> */}
           <img
             alt="youTube-logo"
             src={youtubeLogo}
             className="h-11 cursor-pointer"
           />
+          {/* </Link> */}
         </div>
         <div className="col-span-10 pt-[9px]">
           <div>
