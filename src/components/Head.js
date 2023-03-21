@@ -56,8 +56,8 @@ const Head = () => {
   };
 
   return (
-    <div className="relative bg-red-600">
-      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-white">
+    <div className="relative">
+      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-red-400">
         <div className="flex gap-3 col-span-1">
           <FaBars
             size={20}
