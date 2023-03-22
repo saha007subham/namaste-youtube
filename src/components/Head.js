@@ -57,8 +57,8 @@ const Head = () => {
 
   return (
     <div className="relative">
-      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-red-400">
-        <div className="flex gap-3 col-span-1">
+      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-red-600">
+        <div className="flex pl-1 justify-evenly col-span-1">
           <FaBars
             size={20}
             className="mt-3 cursor-pointer"
@@ -72,9 +72,9 @@ const Head = () => {
           />
           {/* </Link> */}
         </div>
-        <div className="col-span-10 pt-[9px]">
+        <div className="col-span-10">
           <div>
-            <div className=" flex justify-center items-center">
+            <div className=" flex justify-center pt-1 font-serif">
               <input
                 type="text"
                 placeholder="Search"
@@ -84,16 +84,23 @@ const Head = () => {
                 onBlur={() => setShowSuggestion(false)}
                 className="w-1/2 border border-gray-400 p-[4px] pl-[8px] outline-none rounded-l-full"
               />
-              <button className="border border-gray-400 bg-gray-100 p-[2px] pl-[14px] w-[50px] h-[33px]  rounded-r-full hover:bg-gray-200 mr-3">
+              <button className="border border-gray-400 bg-gray-100 p-[2px] pl-[10px] w-[50px] h-[35px]  rounded-r-full hover:bg-gray-200 mr-3">
                 <FaSistrix size={18} />
               </button>
             </div>
 
             {showSuggestion && (
-              <div className="bg-gray-200 fixed flex justify-start w-[35%] ml-[207px]">
-                <ul>
+              <div className="shadow-xl fixed rounded-xl cursor-pointer flex justify-start w-[461px] ml-[217px] font-serif">
+                <ul className="w-[100%]">
                   {suggestions.map((s, id) => {
-                    return <li key={id}>{s}</li>;
+                    return (
+                      <li
+                        className="hover:bg-gray-200 w-[100%] p-1 pl-3"
+                        key={id}
+                      >
+                        {s}
+                      </li>
+                    );
                   })}
                 </ul>
               </div>
@@ -103,7 +110,7 @@ const Head = () => {
           </div>
         </div>
 
-        <div className="col-span-1 flex justify-end items-start gap-5">
+        <div className="col-span-1 flex justify-evenly items-center">
           <FaVideo size={20} className="cursor-pointer" />
           <FaBell size={20} className="cursor-pointer" />
           <FaUserCircle size={20} className="cursor-pointer" />

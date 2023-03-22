@@ -79,7 +79,7 @@ const Sidebar = () => {
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4">
-              <div className="w-5">
+              <div className="w-6">
                 <img
                   alt="img1"
                   src="https://yt3.ggpht.com/W-LbQKXkf3HJsvau1PC8jnOoryI_7AjdGGORmmpWUO4Bdb3Alem-X4fasmV43aRXRydCy3gyAig=s88-c-k-c0x00ffffff-no-rj"
@@ -92,7 +92,7 @@ const Sidebar = () => {
             </li>
           </Link>
           <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4 cursor-pointer">
-            <div className="w-5 font-serif">
+            <div className="w-6 font-serif">
               <img
                 alt="img1"
                 src="https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s88-c-k-c0x00ffffff-no-rj"
@@ -104,7 +104,7 @@ const Sidebar = () => {
             </div>
           </li>
           <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4 cursor-pointer">
-            <div className="w-5">
+            <div className="w-6">
               <img
                 alt="img1"
                 src="https://yt3.ggpht.com/oQ2NQMuq-9IS6_MZdsGXa0RWecaACremA01Z7jo-YpoEF1H6PyUF8PZzXkV10OYwSP3UMJDeTg=s88-c-k-c0x00ffffff-no-rj"
@@ -116,7 +116,7 @@ const Sidebar = () => {
             </div>
           </li>
           <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4 cursor-pointer">
-            <div className="w-5">
+            <div className="w-6">
               <img
                 alt="img1"
                 src="https://yt3.ggpht.com/ytc/AL5GRJUCKbbwwsyu7RNlviwAYIULzxhZdPeeOwhuU_sC=s88-c-k-c0x00ffffff-no-rj"
@@ -128,7 +128,7 @@ const Sidebar = () => {
             </div>
           </li>
           <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4 cursor-pointer">
-            <div className="w-5">
+            <div className="w-6">
               <img
                 alt="img1"
                 src="https://yt3.ggpht.com/ytc/AL5GRJWaboT3D3wr6vqucfvRTT2Im_qrYYQrl3MKSz8zlw=s88-c-k-c0x00ffffff-no-rj"
