@@ -26,7 +26,7 @@ const Sidebar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="w-[18%] mt-7 bg-red-300">
+    <div className="w-[18%] mt-7">
       <div className="p-4">
         <ul>
           <Link to={"/"}>
@@ -34,7 +34,7 @@ const Sidebar = () => {
               <div className="w-5">
                 <FaHome size={20} />
               </div>
-              <div className="w-24 font-serif	">
+              <div className="w-24	">
                 <p>Home</p>
               </div>
             </li>
@@ -43,7 +43,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaRegPlayCircle size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>Subcriptions</p>
             </div>
           </li>
@@ -51,7 +51,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaPhotoVideo size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>Library</p>
             </div>
           </li>
@@ -59,7 +59,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaClock size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>History</p>
             </div>
           </li>
@@ -67,7 +67,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaList size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>Your Videos</p>
             </div>
           </li>
@@ -75,7 +75,7 @@ const Sidebar = () => {
       </div>
 
       <div className="p-4 pt-0">
-        <h1 className=" pl-5 font-bold mb-1 font-serif">Subscriptions</h1>
+        <h1 className=" pl-5 font-bold mb-1">Subscriptions</h1>
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4">
@@ -86,20 +86,20 @@ const Sidebar = () => {
                   className="rounded-xl"
                 />
               </div>
-              <div className="w-24 font-serif">
+              <div className="w-24 ">
                 <p>Sandeep ..</p>
               </div>
             </li>
           </Link>
           <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4 cursor-pointer">
-            <div className="w-6 font-serif">
+            <div className="w-6 ">
               <img
                 alt="img1"
                 src="https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s88-c-k-c0x00ffffff-no-rj"
                 className="rounded-xl"
               />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>JS Maste..</p>
             </div>
           </li>
@@ -111,7 +111,7 @@ const Sidebar = () => {
                 className="rounded-xl"
               />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>Dhruv Ra..</p>
             </div>
           </li>
@@ -123,7 +123,7 @@ const Sidebar = () => {
                 className="rounded-xl"
               />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>Gamming R..</p>
             </div>
           </li>
@@ -135,7 +135,7 @@ const Sidebar = () => {
                 className="rounded-xl"
               />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24">
               <p>Zem TV</p>
             </div>
           </li>
@@ -143,14 +143,14 @@ const Sidebar = () => {
       </div>
 
       <div className="p-4 pt-0">
-        <h1 className=" pl-5 font-bold mb-1 font-serif">Explore</h1>
+        <h1 className=" pl-5 font-bold mb-1 ">Explore</h1>
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-gray-200 flex justify-around items-center rounded-xl p-3 gap-4">
               <div className="w-5">
                 <FaFire size={20} />
               </div>
-              <div className="w-24 font-serif">
+              <div className="w-24 ">
                 <p>Trending</p>
               </div>
             </li>
@@ -159,7 +159,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaMusic size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>Music</p>
             </div>
           </li>
@@ -167,7 +167,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaFilm size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>Movies</p>
             </div>
           </li>
@@ -175,7 +175,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaRegNewspaper size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>News</p>
             </div>
           </li>
@@ -183,7 +183,7 @@ const Sidebar = () => {
             <div className="w-5">
               <FaLightbulb size={20} />
             </div>
-            <div className="w-24 font-serif">
+            <div className="w-24 ">
               <p>Learning</p>
             </div>
           </li>

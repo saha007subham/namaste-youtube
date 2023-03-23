@@ -219,3 +219,39 @@ export const findPrime = (num) => {
   }
   return primes[num - 1];
 };
+
+export function fnum(x) {
+  if (isNaN(x)) return x;
+
+  if (x < 9999) {
+    return x;
+  }
+
+  if (x < 1000000) {
+    return Math.round(x / 1000) + "K";
+  }
+  if (x < 10000000) {
+    return (x / 1000000).toFixed(2) + "M";
+  }
+
+  if (x < 1000000000) {
+    return Math.round(x / 1000000) + "M";
+  }
+
+  if (x < 1000000000000) {
+    return Math.round(x / 1000000000) + "B";
+  }
+
+  return "1T+";
+}
+
+export function getCurrentDate(separator = "") {
+  let newDate = new Date();
+  let date = newDate.getDate();
+  let month = newDate.getMonth() + 1;
+  let year = newDate.getFullYear();
+
+  return `${year}${separator}${
+    month < 10 ? `0${month}` : `${month}`
+  }${separator}${date}`;
+}

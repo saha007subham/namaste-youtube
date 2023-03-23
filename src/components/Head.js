@@ -57,7 +57,7 @@ const Head = () => {
 
   return (
     <div className="relative">
-      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-red-600">
+      <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-white">
         <div className="flex pl-1 justify-evenly col-span-1">
           <FaBars
             size={20}
@@ -74,7 +74,7 @@ const Head = () => {
         </div>
         <div className="col-span-10">
           <div>
-            <div className=" flex justify-center pt-1 font-serif">
+            <div className=" flex justify-center pt-1">
               <input
                 type="text"
                 placeholder="Search"
