@@ -29,11 +29,21 @@ const VideoContainer = () => {
 
   // console.log(videos[0]);
 
+  const obj = {
+    name: "Subham Saha",
+    age: 25,
+  };
+
   return (
     <div className={style}>
       {videos.map((video) => {
+        console.log(video?.snippet?.title);
         return (
-          <Link to={"/watch?v=" + video.id} key={video.id}>
+          <Link
+            to={"/watch?v=" + video.id}
+            key={video.id}
+            state={{ name: video?.snippet?.title }}
+          >
             <VideoCard info={video} />
           </Link>
         );

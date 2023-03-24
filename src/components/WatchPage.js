@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import LiveChat from "../LiveChat";
 import { closeMenu } from "../utils/appSlice";
 import CommentsContainer from "./CommentsContainer";
+import { useLocation } from "react-router-dom";
 
 const WatchPage = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
@@ -11,6 +12,8 @@ const WatchPage = () => {
   console.log(searchParams.get("v"));
 
   const dispatch = useDispatch();
+  const location = useLocation();
+  console.log(location.state);
 
   useEffect(() => {
     dispatch(closeMenu());

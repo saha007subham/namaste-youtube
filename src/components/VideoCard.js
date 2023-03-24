@@ -6,7 +6,7 @@ const VideoCard = ({ info }) => {
   const currDate = getCurrentDate();
 
   const publisedDate = (info?.snippet?.publishedAt).slice(0, 10);
-  console.log(publisedDate.concat("-"));
+  // console.log(publisedDate.concat("-"));
   return (
     <div className="w-[95%] mb-5 cursor-pointer">
       <div>
