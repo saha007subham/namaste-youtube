@@ -42,7 +42,7 @@ const VideoContainer = () => {
           <Link
             to={"/watch?v=" + video.id}
             key={video.id}
-            state={{ name: video?.snippet?.title }}
+            state={{ obj: video }}
           >
             <VideoCard info={video} />
           </Link>

@@ -255,3 +255,14 @@ export function getCurrentDate(separator = "") {
     month < 10 ? `0${month}` : `${month}`
   }${separator}${date}`;
 }
+
+export function getFirstLetter(name) {
+  const nameArray = name.split(" ");
+
+  let str = "";
+
+  for (let i = 0; i < nameArray.length; i++) {
+    str += nameArray[i][0];
+  }
+  return str;
+}
