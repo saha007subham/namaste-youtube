@@ -22,6 +22,7 @@ const Head = () => {
   const searchCache = useSelector((store) => store.search);
 
   const dispatch = useDispatch();
+  // console.log(suggestions);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -41,6 +42,7 @@ const Head = () => {
     // console.log(searchQuery);
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
+
     // console.log(json[1]);
     setSuggestions(json[1]);
 
@@ -90,7 +92,7 @@ const Head = () => {
             </div>
 
             {showSuggestion && (
-              <div className="shadow-xl fixed rounded-xl cursor-pointer flex justify-start w-[461px] ml-[217px] font-serif">
+              <div className="shadow-xl bg-white fixed rounded-xl cursor-pointer flex justify-start w-[461px] ml-[217px] font-serif">
                 <ul className="w-[100%]">
                   {suggestions.map((s, id) => {
                     return (
