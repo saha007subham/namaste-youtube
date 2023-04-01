@@ -57,6 +57,8 @@ const Head = () => {
     dispatch(toggleMenu());
   };
 
+  console.log(suggestions);
+
   return (
     <div className="relative">
       <div className="grid grid-flow-col p-2  shadow-m fixed top-0 left-0 right-0 bg-white">
