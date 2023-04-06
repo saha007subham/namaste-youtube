@@ -11,6 +11,7 @@ import Demo2 from "./components/Demo2";
 
 // React Router
 //Namaste Raect
+// removed comments
 
 const appRouter = createBrowserRouter([
   {
